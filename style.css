@@ -1,0 +1,139 @@
+/* Tuckit website: the game's light room, white board and bright pieces, and its font (Baloo 2, SIL OFL 1.1, served from here). */
+@font-face {
+	font-family: "Baloo 2";
+	src: url("fonts/Baloo2-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Baloo 2";
+	src: url("fonts/Baloo2-ExtraBold.ttf") format("truetype");
+	font-weight: 800;
+	font-display: swap;
+}
+
+:root {
+	--bg: #f4efe6;
+	--tray: #e9e2d6;
+	--edge: #d8d3ca;
+	--board: #ffffff;
+	--card: #fffbf6;
+	--ink: #2b2533;
+	--muted: #6e6577;
+	--accent: #ff7a59;
+	--accent-edge: #d9573a;
+	--coral: #ff6b6b;
+	--sky: #4dabf7;
+	--sun: #ffd43b;
+	--teal: #20c997;
+	--lavender: #b197fc;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg); }
+
+body {
+	margin: 0;
+	color: var(--ink);
+	background: var(--bg);
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+main {
+	max-width: 760px;
+	margin: 32px auto 0;
+	padding: 34px 30px 30px;
+	background: var(--board);
+	border: 2px solid var(--edge);
+	border-radius: 28px;
+	box-shadow: 0 6px 0 var(--edge);
+}
+
+a { color: #1c7ed6; }
+
+h1, h2, h3, .logo, .button, .tagline { font-family: "Baloo 2", system-ui, sans-serif; }
+
+h1, h2, h3 { line-height: 1.2; }
+h1 { font-size: 40px; font-weight: 800; margin: 0 0 6px; }
+h2 { font-size: 27px; font-weight: 800; margin: 34px 0 6px; }
+h3 { font-size: 21px; font-weight: 700; margin: 22px 0 2px; }
+
+strong { font-weight: 600; }
+
+.muted { color: var(--muted); }
+
+.logo {
+	display: inline-block;
+	color: var(--ink);
+	font-size: 64px;
+	font-weight: 800;
+	line-height: 1;
+	text-decoration: none;
+	letter-spacing: -0.01em;
+}
+.logo.small { font-size: 30px; }
+
+.tagline { margin: 8px 0 24px; color: var(--muted); font-size: 22px; font-weight: 700; }
+
+.hero { text-align: center; }
+.hero img { display: block; width: 168px; height: 168px; margin: 0 auto 18px; }
+
+.dots { display: flex; justify-content: center; gap: 8px; margin: 0 0 6px; }
+.dots span { width: 14px; height: 14px; border-radius: 4px; }
+
+.card {
+	background: var(--card);
+	border: 2px solid var(--edge);
+	border-radius: 20px;
+	padding: 18px 22px;
+	margin: 22px 0;
+}
+.card > :first-child { margin-top: 0; }
+.card > :last-child { margin-bottom: 0; }
+
+.button {
+	display: inline-block;
+	min-width: 240px;
+	padding: 10px 26px;
+	margin: 6px;
+	color: #ffffff;
+	background: var(--accent);
+	border-radius: 999px;
+	box-shadow: 0 4px 0 var(--accent-edge);
+	font-size: 22px;
+	font-weight: 800;
+	text-align: center;
+	text-decoration: none;
+}
+.button.disabled { color: var(--muted); background: var(--tray); box-shadow: 0 4px 0 var(--edge); pointer-events: none; }
+
+nav.top { margin-bottom: 18px; }
+
+footer {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 24px 16px 40px;
+	color: var(--muted);
+	font-size: 15px;
+	text-align: center;
+}
+footer a { color: var(--ink); margin: 0 8px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 16px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 2px solid var(--tray); }
+th { color: var(--muted); font-weight: 600; }
+
+@media (max-width: 520px) {
+	body { font-size: 17px; }
+	main { margin: 0; border-width: 0 0 2px; border-radius: 0 0 24px 24px; padding: 26px 16px; }
+	.logo { font-size: 48px; }
+	.logo.small { font-size: 26px; }
+	h1 { font-size: 32px; }
+	h2 { font-size: 24px; }
+	.button { width: 100%; min-width: 0; margin: 6px 0; }
+	table { font-size: 15px; }
+	th, td { padding: 8px 6px; }
+}
