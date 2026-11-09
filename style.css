@@ -79,7 +79,7 @@ strong { font-weight: 600; }
 .tagline { margin: 8px 0 24px; color: var(--muted); font-size: 22px; font-weight: 700; }
 
 .hero { text-align: center; }
-.hero img { display: block; width: 168px; height: 168px; margin: 0 auto 18px; }
+.hero img { display: block; width: 168px; height: 168px; margin: 0 auto 18px; border-radius: 22%; box-shadow: 0 4px 0 var(--edge); }
 
 .dots { display: flex; justify-content: center; gap: 8px; margin: 0 0 6px; }
 .dots span { width: 14px; height: 14px; border-radius: 4px; }
